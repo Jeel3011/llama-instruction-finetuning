@@ -6,3 +6,5 @@ outputs/logs/
 __pycache__/
 .ipynb_checkpoints/
 .env
+results
+training.log
