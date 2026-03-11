@@ -5,4 +5,5 @@ peft>=0.8.0
 accelerate>=0.26.0
 bitsandbytes>=0.42.0
 pyyaml>=6.0
+huggingface_hub>=0.20.0
 streamlit>=1.30.0

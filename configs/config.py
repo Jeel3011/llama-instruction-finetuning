@@ -43,8 +43,9 @@ class TrainingConfig:
     learning_rate: float = 2e-4
     warmup_steps: int = 100
     logging_steps: int = 10
-    save_steps: int = 500
-    eval_steps: int = 500
+    save_steps: int = 200
+    eval_steps: int = 200
+    save_total_limit: int = 2       # Keep only the 2 most recent checkpoints
     fp16: bool = True
 
 
@@ -57,7 +58,7 @@ class DataConfig:
     name: str = "tatsu-lab/alpaca"
     train_split: str = "train"
     test_size: float = 0.1
-    max_samples: Optional[int] = None
+    max_samples: Optional[int] = None   # Set e.g. 1000 for a quick test run
 
 
 # -------------------------
@@ -67,7 +68,7 @@ class DataConfig:
 @dataclass
 class HubConfig:
     repo_name: str = "Jeel3011/llama-alpaca-finetuned"
-    push_to_hub: bool = True
+    push_to_hub: bool = False           # Set True only if HF token is configured
 
 
 # -------------------------
