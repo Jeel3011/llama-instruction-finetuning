@@ -37,7 +37,7 @@ class LoraConfigCustom:
 @dataclass
 class TrainingConfig:
     output_dir: str = "./results"
-    num_epochs: int = 3
+    num_epochs: int = 2
     batch_size: int = 4
     gradient_accumulation_steps: int = 4
     learning_rate: float = 2e-4
@@ -58,7 +58,7 @@ class DataConfig:
     name: str = "tatsu-lab/alpaca"
     train_split: str = "train"
     test_size: float = 0.1
-    max_samples: Optional[int] = None   # Set e.g. 1000 for a quick test run
+    max_samples: Optional[int] = 5000   # Set None for full 52K dataset
 
 
 # -------------------------
